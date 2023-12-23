@@ -149,7 +149,7 @@
 1. 2차 기회 페이지 교체기법
    - 참조 비트를 활용
    - 페이지 교체가 필요한 경우에는 FIFO 큐의 선두 항목을 꺼내 참조비트를 조사하여 '0'이면 그 프레임을 교체 대상으로 선택, '1'이면 이를 '0'으로 지우고 FIFO 큐의 뒤에 넣음
-   ![image](https://github.com/myrhymetree/operation-system/assets/94158097/341bedbd-7098-4d46-816f-ad858b1fe14d)
+     
    ![image](https://github.com/myrhymetree/operation-system/assets/94158097/e1ecbae5-1fdc-4e7d-99b1-d7d5b6b5ae84)
 
 
@@ -158,7 +158,8 @@
 1. 클럭 페이지 교체
    - 2차 기회 알고리즘에서 선형 큐 대신 원형 큐를 사용
    - 포인터가 시계바늘이 돌아가는 것처럼 원형 큐를 돌며 교체 대상 결정
-     ![image](https://github.com/myrhymetree/operation-system/assets/94158097/95436618-aad1-4a21-8cd4-2f36fb676fac)
+   
+   ![image](https://github.com/myrhymetree/operation-system/assets/94158097/95436618-aad1-4a21-8cd4-2f36fb676fac)
 
 
 ## 7.4.7 프로세스별 페이지 집합 관리
