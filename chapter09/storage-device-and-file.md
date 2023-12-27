@@ -76,7 +76,7 @@
     - SSTF나 SCAN보다 응답시간의 편차가 적음
 
 ### 9.2.5 C-SCAN 스케줄링
-
+![image](https://github.com/myrhymetree/operating-system/assets/94158097/77243031-c83e-4dfd-81d1-ff2a4bc33c3e)
 1. C-SCAN 스케줄링
     - 바깥쪽이든 안쪽이든 오로지 한쪽 방향으로만 서비스
     - 나머지는 SCAN과 동일
