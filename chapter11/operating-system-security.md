@@ -217,6 +217,7 @@
         - 사용자에 대한 식별 및 인증, 접근 제어, 객체 보호, 침입 탐지 등
     - TCB의 하드웨어, 펌웨어, 소프트웨어 요소
     - 시스템 호출을 통해 보안 경계를 통과
+    - 일반 사용자는 보안 경계를 넘을 수 없음
    
     ![image](https://github.com/myrhymetree/operating-system/assets/94158097/d2c8c2a4-2d6f-4285-9e1f-901d7f128541)
     
