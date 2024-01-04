@@ -284,15 +284,15 @@ until false;
     - 세마포어를 이용한 해결
         - 상호배제 : 세마포어 wrt (초깃값 1)
             
-            ![판독기기록기세마포어이용해결.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/440e0051-e1a6-4fc1-b7a8-96dc6ee9928e/0141a927-5bcc-4f95-a808-e93fa6206121/%ED%8C%90%EB%8F%85%EA%B8%B0%EA%B8%B0%EB%A1%9D%EA%B8%B0%EC%84%B8%EB%A7%88%ED%8F%AC%EC%96%B4%EC%9D%B4%EC%9A%A9%ED%95%B4%EA%B2%B0.png)
+            ![image](https://github.com/myrhymetree/operating-system/assets/94158097/0a322433-9a1c-446c-b0d7-8e8d68347289)
             
         - 판독기 우선 : 일반변수 rcount(초깃값 0), 세마포어 mutex(초깃값 1)
             
-            ![판독기우선.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/440e0051-e1a6-4fc1-b7a8-96dc6ee9928e/224783ee-d0d8-4ca7-8ed4-fb0b342a3576/%ED%8C%90%EB%8F%85%EA%B8%B0%EC%9A%B0%EC%84%A0.png)
+            ![image](https://github.com/myrhymetree/operating-system/assets/94158097/28f7042a-024e-4483-b1bb-ed5875fff6dd)
             
         - 2개의 세마포어 wrt(초깃값 1), mutex(초깃값 1), 일반변수 rcount(초깃값 0)
             
-            ![2개의세마포어.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/440e0051-e1a6-4fc1-b7a8-96dc6ee9928e/1b86c7f7-ab1b-4638-8a2c-0c9a78bdc6cd/2%EA%B0%9C%EC%9D%98%EC%84%B8%EB%A7%88%ED%8F%AC%EC%96%B4.png)
+            ![image](https://github.com/myrhymetree/operating-system/assets/94158097/ad0cae32-0bf5-4322-8b74-c2612c6f7b76)
             
 3. 제 2 판독기/기록기 문제
     - 판독기가 공유자원에 접근 중이라면 판독기보다 기록기에 우선순위를 줌
@@ -304,7 +304,7 @@ until false;
     - 세마포어를 이용한 해결
         - 5개의 세마포어 rd(초깃값 1) ,wrt(1), mutex1(1), mutex2(1), mutex3(1)
         
-        ![Untitled](https://prod-files-secure.s3.us-west-2.amazonaws.com/440e0051-e1a6-4fc1-b7a8-96dc6ee9928e/1223cd1f-769d-4e96-b11d-3d4ad164030f/Untitled.png)
+        ![image](https://github.com/myrhymetree/operating-system/assets/94158097/93b0435d-293f-490c-9dc9-c8cf1e91ef0e)
         
 
 ## 4.4 프로세스 간의 통신(IPC)
@@ -320,7 +320,7 @@ until false;
 
 1. 공유 기억장치(메모리) 기법
 
-![Untitled](https://prod-files-secure.s3.us-west-2.amazonaws.com/440e0051-e1a6-4fc1-b7a8-96dc6ee9928e/a062ed2a-dd4d-4065-b9ef-9be8401ac733/Untitled.png)
+![image](https://github.com/myrhymetree/operating-system/assets/94158097/5a24ec06-c1b2-4999-ad57-652f54dab22f)
 
 - 프로세스 간의 공유 변수를 두어 프로세스가 이를 이용하여 정보 교환
     - 동일한 변수 : 공유자원인 메모리 공간 사용
@@ -335,8 +335,7 @@ until false;
 
 1. 메시지 시스템 기법
     
-    ![Untitled](https://prod-files-secure.s3.us-west-2.amazonaws.com/440e0051-e1a6-4fc1-b7a8-96dc6ee9928e/1a741be7-86bb-44de-8d85-50daae485bd7/Untitled.png)
-    
+    ![image](https://github.com/myrhymetree/operating-system/assets/94158097/c2a5b3d0-d22a-48bc-a033-84f445789b2e)
 
 - 메시지 교환방식을 이용하여 프로세스가 서로 정보 교환
 - 통신기능은 시스템 호출 send와 receive 연산자의 형태로 제공
@@ -345,7 +344,7 @@ until false;
 
 1. 통신 링크
     
-    ![Untitled](https://prod-files-secure.s3.us-west-2.amazonaws.com/440e0051-e1a6-4fc1-b7a8-96dc6ee9928e/c680f59f-116e-4400-8a4c-674b04121341/Untitled.png)
+    ![image](https://github.com/myrhymetree/operating-system/assets/94158097/ce99280e-ce61-44d1-9d67-573a9db5d5ff)
     
     - 메시지가 지나다니는 통로
     - 통신을 원하는 프로세스들 사이에 존재해야 함
@@ -364,7 +363,7 @@ until false;
 2. 직접 통신
     - 두 프로세스가 직접 서로를 지정하여 메시지 전달
         
-        ![Untitled](https://prod-files-secure.s3.us-west-2.amazonaws.com/440e0051-e1a6-4fc1-b7a8-96dc6ee9928e/cc64f00f-952d-4fe4-8ba7-20d6d86e5921/Untitled.png)
+        ![image](https://github.com/myrhymetree/operating-system/assets/94158097/9847c63a-5b0a-4aaf-84ff-02c8fd5b69fe)
         
     - 오직 하나의 통신 링크가 자동 설정
     - 하나의 통신 링크는 오직 두 프로세스 사이에만 연관
@@ -374,16 +373,16 @@ until false;
     - receive(Q, message) : 프로세스 Q에서 메시지를 받음
     - 대칭형 주소 지정
         
-        ![Untitled](https://prod-files-secure.s3.us-west-2.amazonaws.com/440e0051-e1a6-4fc1-b7a8-96dc6ee9928e/02464d5d-675d-434b-8a5c-011b8e3a90e3/Untitled.png)
+        ![image](https://github.com/myrhymetree/operating-system/assets/94158097/896ece21-768e-4cc0-997b-22787ae61362)
         
     - 비대칭형 주소 지정
         
-        ![Untitled](https://prod-files-secure.s3.us-west-2.amazonaws.com/440e0051-e1a6-4fc1-b7a8-96dc6ee9928e/9436f37a-f426-4c21-9e7e-a2803c65646d/Untitled.png)
+        ![image](https://github.com/myrhymetree/operating-system/assets/94158097/90286d1a-a08d-41ed-952f-b7a1d804ce8e)
         
         - 수신자가 여러 송신자와 통신 링크를 갖는 경우 사용
 3. 간접 통신
     
-    ![Untitled](https://prod-files-secure.s3.us-west-2.amazonaws.com/440e0051-e1a6-4fc1-b7a8-96dc6ee9928e/c6394b0b-d9ab-4f1a-8d64-bcac7d41681b/Untitled.png)
+    ![image](https://github.com/myrhymetree/operating-system/assets/94158097/d820133e-708b-49f7-95b6-96566af41ced)
     
     - 우편함(mailbox 또는 port)을 통해 메시지를 주고 받음(유연함)
     - 두 프로세스는 공유 우편함을 가질 때만 통신할 수 있음
@@ -395,7 +394,7 @@ until false;
     - receive(Q, message) : 프로세스 Q에서 메시지를 받음
 4. 우편함의 소유권
     
-    ![Untitled](https://prod-files-secure.s3.us-west-2.amazonaws.com/440e0051-e1a6-4fc1-b7a8-96dc6ee9928e/06eb2bff-c745-421a-873d-f85957dd304d/Untitled.png)
+    ![image](https://github.com/myrhymetree/operating-system/assets/94158097/284ead35-16ff-4df2-befb-ae2258200026)
     
     - 프로세스 소속
         - 우편함이 수신 프로세스에 소속
@@ -403,7 +402,7 @@ until false;
         - 통신링크는 단방향
         - 수신 프로세스가 종료하면 우편함도 사라짐
         
-        ![Untitled](https://prod-files-secure.s3.us-west-2.amazonaws.com/440e0051-e1a6-4fc1-b7a8-96dc6ee9928e/638af420-7d16-4ba1-b05c-ef9519519493/Untitled.png)
+        ![image](https://github.com/myrhymetree/operating-system/assets/94158097/6175ed7a-3128-4bc4-98be-2878a930c539)
         
     - 운영체제 소속
         - 우편함은 스스로 존재
@@ -413,7 +412,7 @@ until false;
         - 통신링크는 양방향
 5. 링크의 용량
     
-    ![Untitled](https://prod-files-secure.s3.us-west-2.amazonaws.com/440e0051-e1a6-4fc1-b7a8-96dc6ee9928e/0852a4a3-a8c4-425b-b4fa-8b5357bbdaf5/Untitled.png)
+    ![image](https://github.com/myrhymetree/operating-system/assets/94158097/2960a83b-558a-4647-9302-3d164cc08637)
     
     - 무제한 용량 : 송신자는 대기할 필요가 없음
     - 제한된 용량 : 큐가 가득차면 송신자는 대기해야 함
