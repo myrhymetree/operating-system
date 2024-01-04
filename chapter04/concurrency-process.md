@@ -59,7 +59,7 @@
 
 1. 프로세스 동기화(synchronization)
     
-    ![동기화.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/440e0051-e1a6-4fc1-b7a8-96dc6ee9928e/da672d10-aa63-48d6-b77d-f4aa9b9b0d49/%EB%8F%99%EA%B8%B0%ED%99%94.png)
+    ![image](https://github.com/myrhymetree/operating-system/assets/94158097/6bf92408-6b3f-467b-9346-b287f0984840)
     
     - 2개 이상의 프로세스에 대한 처리순서를 결정하는 것.
     - 동시에 사용할 수 없는 공유자원이 있는 경우 동기화 필요
@@ -68,7 +68,7 @@
     - 2개 이상의 프로세스가 동시에 사용하면 안되는 공유자원을 액세스하는 프로그램 코드 영역
 3. 상호배제(mutual exclusion)
     
-    ![Untitled](https://prod-files-secure.s3.us-west-2.amazonaws.com/440e0051-e1a6-4fc1-b7a8-96dc6ee9928e/0b5b0e88-19e8-4b55-a6e7-258e8929b1a0/Untitled.png)
+    ![image](https://github.com/myrhymetree/operating-system/assets/94158097/33f69aa2-79f6-414e-a601-83749229c4ad)
     
     - 2개 이상의 프로세스가 동시에 임계영역에 진입하지 못하도록 하는 것.
 4. 통신
@@ -149,7 +149,7 @@ until false;
     - 두 표준단위연산(기본 연산) P와 V에 의해서만 접근됨
         - 기본연산 : 인터럽트되지 않고 하나의 단위로 처리됨
     
-    ![Untitled](https://prod-files-secure.s3.us-west-2.amazonaws.com/440e0051-e1a6-4fc1-b7a8-96dc6ee9928e/3a61f463-4809-4241-ba87-7a2887a2a875/Untitled.png)
+    ![image](https://github.com/myrhymetree/operating-system/assets/94158097/cc001cbb-d321-4bd5-8c56-8dd5d876c3e1)
     
     - P : 검사, 또는 감소시키려는 시도
     - V : 증가
@@ -165,15 +165,15 @@ until false;
     - 적절한 시간 내에 임계영역 수행을 시작할 수 있어야 함
 - 상호배제를 위한 임계영역 주변의 코드 영역
     
-    ![Untitled](https://prod-files-secure.s3.us-west-2.amazonaws.com/440e0051-e1a6-4fc1-b7a8-96dc6ee9928e/ea5572fe-bc5a-40d0-8999-7c2956bb91fa/Untitled.png)
+    ![image](https://github.com/myrhymetree/operating-system/assets/94158097/2c92fd90-9b1d-4278-a07c-f73003507d90)
     
 - 세마포어 이용
     
-    ![Untitled](https://prod-files-secure.s3.us-west-2.amazonaws.com/440e0051-e1a6-4fc1-b7a8-96dc6ee9928e/aab31d5b-9f70-48fb-81bc-25ccd90372e9/Untitled.png)
+    ![image](https://github.com/myrhymetree/operating-system/assets/94158097/b142cfbf-27ea-4852-80bf-6b3ea1ef4625)
     
 - 상호배제 해결 예시
     
-    ![상호배제해결.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/440e0051-e1a6-4fc1-b7a8-96dc6ee9928e/964ddac8-7efa-4ee4-aa5e-f64dbf274260/%EC%83%81%ED%98%B8%EB%B0%B0%EC%A0%9C%ED%95%B4%EA%B2%B0.png)
+    ![image](https://github.com/myrhymetree/operating-system/assets/94158097/2ccc82e1-97ee-4309-8c55-ede0bd54b25f)
     
 
 ### 4.2.4 동기화 해결
