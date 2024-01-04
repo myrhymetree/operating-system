@@ -180,8 +180,8 @@ until false;
 
 - 상황 : 프로세스 A가 코드 S₁을 수행한 후 프로세스 B가 코드 S₂를 수행하도록 동기화
     
-    ![Untitled](https://prod-files-secure.s3.us-west-2.amazonaws.com/440e0051-e1a6-4fc1-b7a8-96dc6ee9928e/2d0e0c6e-fb4d-420b-acc2-5ef2a12691ff/Untitled.png)
-    
+    ![image](https://github.com/myrhymetree/operating-system/assets/94158097/5213ca7d-d2fa-43be-9e59-73c48bf78f2d)
+
 - 세마포어 sync 초깃값은 0
 
 ## 4.3 프로세스의 상호협력
@@ -190,7 +190,7 @@ until false;
 
 1. 생산자/소비자 문제
     
-    ![Untitled](https://prod-files-secure.s3.us-west-2.amazonaws.com/440e0051-e1a6-4fc1-b7a8-96dc6ee9928e/d49102ed-6354-4966-a9e1-1db75ae691b6/Untitled.png)
+    ![image](https://github.com/myrhymetree/operating-system/assets/94158097/b7c516a1-9225-452f-84d4-1c4ac3983bc9)
     
     - 두 협력 프로세스 사이에 버퍼를 두고 생산자와 소비자의 상황을 다루는 문제
     - 고정된 크기를 가진 버퍼를 생산자와 소비자 사이에 둠
@@ -210,20 +210,20 @@ until false;
     - 세마포어를 이용한 해결
         - 상호배제 : 세마포어 mutex (초깃값 1)
     
-    ![Untitled](https://prod-files-secure.s3.us-west-2.amazonaws.com/440e0051-e1a6-4fc1-b7a8-96dc6ee9928e/847e5c6d-f57e-4c41-acb1-a5386f9032f2/Untitled.png)
+    ![image](https://github.com/myrhymetree/operating-system/assets/94158097/94d4ae00-ed69-40ab-a664-ffbeb0abca9f)
     
     - 버퍼가 가득 찬 경우 동기화 :세마포어 empty (초깃값 n)
     
-    ![Untitled](https://prod-files-secure.s3.us-west-2.amazonaws.com/440e0051-e1a6-4fc1-b7a8-96dc6ee9928e/3877f6dd-5cb7-4dd4-8f35-a00d92147390/Untitled.png)
+    ![image](https://github.com/myrhymetree/operating-system/assets/94158097/7e4e7ce0-c540-42e3-a76a-b391c9cdf2e8)
     
 
 - 버파가 빈 경우 동기화 : 세마포어 full (초깃값 0)
 
-![Untitled](https://prod-files-secure.s3.us-west-2.amazonaws.com/440e0051-e1a6-4fc1-b7a8-96dc6ee9928e/3e77e352-193f-43d3-b0ce-b8c90838610c/Untitled.png)
+    ![image](https://github.com/myrhymetree/operating-system/assets/94158097/76fa9a6b-62d9-479e-a29e-4a934fa0a080)
 
 - 3개의 세마포어 : mutex(초깃값 1), empty(초깃값 n), full(초깃값 0)
 
-![Untitled](https://prod-files-secure.s3.us-west-2.amazonaws.com/440e0051-e1a6-4fc1-b7a8-96dc6ee9928e/7c06fefd-886e-474d-ba3b-d09619c1c898/Untitled.png)
+    ![image](https://github.com/myrhymetree/operating-system/assets/94158097/b9a4401f-4c4a-4506-aa5e-cb242a4d5d71)
 
 생산자 프로세스에 대한 코드
 
@@ -269,7 +269,7 @@ until false;
     이런 형태의 어려운 점이 생기지 않도록 하기 위해서는 기록기가 공유객체에 대해 배타적 접근을 하도록 해야 함(상호 배제).
     
 
-![판독기기록기.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/440e0051-e1a6-4fc1-b7a8-96dc6ee9928e/01e87eab-cb5a-4ceb-aa46-c885a06abb7f/%ED%8C%90%EB%8F%85%EA%B8%B0%EA%B8%B0%EB%A1%9D%EA%B8%B0.png)
+![image](https://github.com/myrhymetree/operating-system/assets/94158097/bf408799-32ef-429e-ad35-b5cbbf7b5eb0)
 
 1. 판독기/기록기 문제
     - 여러 개의 판독기가 동시에 공유 데이터 객체에 접근하는 것은 문제가 없음
