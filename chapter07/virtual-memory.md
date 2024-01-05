@@ -14,8 +14,9 @@
 - 컴퓨터 시스템의 메모리 크기보다 더 큰 기억공간이 필요한 프로세스를 실행할 수 있게 하는 방법
 - 핵심은 실행 중인 프로세스에 의해 참조되는 주소(가상주소)를 메모리에서 사용하는 주소(실주소)와 분리하는 것
 - 현재 필요한 일부만 메모리에 적재
-    
-    ![가상메모리.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/440e0051-e1a6-4fc1-b7a8-96dc6ee9928e/a9651930-de7f-49f6-9c1f-2db754e609c7/%EA%B0%80%EC%83%81%EB%A9%94%EB%AA%A8%EB%A6%AC.png)
+
+<img src="https://github.com/myrhymetree/operating-system/assets/94158097/7f570588-ccb7-4d4c-be76-08ef69ade0ce" width="50%" height="50%"/>
+
     
 1. 사상(mapping)
 - 가상주소를 실주소로 변환하는 과정
@@ -27,8 +28,9 @@
     - 주소 변환 사상표를 이용
 2. 인위적 연속성
     - 가상주소 공간에서 연속인 주소가 실주소공간에서도 연속일 필요는 없음
-        
-        ![인위적연속성.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/440e0051-e1a6-4fc1-b7a8-96dc6ee9928e/c4800cf4-ae72-4074-aa8d-3f80df8f253d/%EC%9D%B8%EC%9C%84%EC%A0%81%EC%97%B0%EC%86%8D%EC%84%B1.png)
+
+        <img src="https://github.com/myrhymetree/operating-system/assets/94158097/47102a0c-cb21-40f2-b00f-053a558545c0" width="50%" height="50%"/>
+        <img src="" width="50%" height="50%"/>
         
 
 ## 7.2 블록 단위 주소 변환
@@ -37,16 +39,17 @@
     - 변환에 필요한 정보량이 많아 비효율적임
 2. 주소 변환 사상표
     - 동적 주소변환을 위한 정보를 가진 표
-        
-        ![Untitled](https://prod-files-secure.s3.us-west-2.amazonaws.com/440e0051-e1a6-4fc1-b7a8-96dc6ee9928e/33f7c4b4-7eac-4971-bcf2-5ecb059f15c9/Untitled.png)
+
+        <img src="https://github.com/myrhymetree/operating-system/assets/94158097/c51d8d11-0a07-4b59-b9fb-d5cc9b459b08" width="80%" height="80%"/>
         
     - 주소 변환이 필요한 바이트나 워드 단위로 이뤄지면 변환에 필요한 정보량이 너무 많아 비효율적임
 3. 블록 사상 시스템
     - 정보를 블록 단위로 분류하여 각 블록이 메모리의 어디에 위치하는지만을 관리
     - 가상 메모리의 각 블록이 메모리의 어디에 위치하는지 관리
     - 가상주소 ｖ= (ｂ, ｄ): b는 블록 번호, d는 블록의 시작점으로부터의 변위
-        
-        ![블록사상시스템.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/440e0051-e1a6-4fc1-b7a8-96dc6ee9928e/9a921db7-d9d6-4cca-9362-ef5669aeba15/%EB%B8%94%EB%A1%9D%EC%82%AC%EC%83%81%EC%8B%9C%EC%8A%A4%ED%85%9C.png)
+  
+      <img src="https://github.com/myrhymetree/operating-system/assets/94158097/981f1fd7-6cb6-4d2b-8fab-d3e38e8f293f" width="80%" height="80%"/>
+
         
     - 블록의 크기는 적절히 정해야 함
         - 크기가 커질수록
@@ -56,8 +59,8 @@
             - 블록 전송시간 감소, 동시에 적재할 프로세스 수 증가
             - 사상표 크기 증가
 4. 블록 구성 방식
-    
-    ![Untitled](https://prod-files-secure.s3.us-west-2.amazonaws.com/440e0051-e1a6-4fc1-b7a8-96dc6ee9928e/e647b440-a871-4f6c-b04f-ae59393c3138/Untitled.png)
+
+    <img src="https://github.com/myrhymetree/operating-system/assets/94158097/d4c952f5-5737-4c97-ba83-ab8ff4f4e50a" width="50%" height="50%"/>
     
     - 페이지 : 블록의 크기가 동일
     - 세그먼트 : 블록의 크기가 다름
