@@ -100,7 +100,7 @@
         
     - 연관 기억장치 : 저장된 값을 이용하여 데이터를 엑세스하는 고속 메모리 장치
     
-    ![image](https://github.com/myrhymetree/operating-system/assets/94158097/02a5f1bf-3617-4599-9807-0a07fa3e3ea2)
+        ![image](https://github.com/myrhymetree/operating-system/assets/94158097/02a5f1bf-3617-4599-9807-0a07fa3e3ea2)
     
     - 연관 / 직접 사상 : 연관 사상표에는 가장 최근에 참조된 페이지 항목만 보관하고 나머지는 페이지 사상표에 수록하여, 연관 사상표에 없을 때는 직접 사상 기법으로 변환
 6. 페이징 기법의 특징
