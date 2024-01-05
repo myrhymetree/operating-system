@@ -15,7 +15,7 @@
 - 핵심은 실행 중인 프로세스에 의해 참조되는 주소(가상주소)를 메모리에서 사용하는 주소(실주소)와 분리하는 것
 - 현재 필요한 일부만 메모리에 적재
 
-<img src="https://github.com/myrhymetree/operating-system/assets/94158097/7f570588-ccb7-4d4c-be76-08ef69ade0ce" width="50%" height="50%"/>
+    <img src="https://github.com/myrhymetree/operating-system/assets/94158097/7f570588-ccb7-4d4c-be76-08ef69ade0ce" width="50%" height="50%"/>
 
     
 1. 사상(mapping)
