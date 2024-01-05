@@ -1,4 +1,4 @@
-![image](https://github.com/myrhymetree/operating-system/assets/94158097/f79b7a8a-72f7-47a1-946a-6bcadc6dd361)# 7.가상메모리
+# 7.가상메모리
 
 ## 7.1 가상 메모리의 개념
 
@@ -205,15 +205,13 @@
     - 각 페이지가 메모리에 적재될 때마다 그때의 시간을 기억
     - FIFO 큐로 구현
         
-        ![Untitled](https://prod-files-secure.s3.us-west-2.amazonaws.com/440e0051-e1a6-4fc1-b7a8-96dc6ee9928e/dd35f666-6b07-414e-b3df-11afb4f5dfb5/Untitled.png)
+       ![image](https://github.com/myrhymetree/operating-system/assets/94158097/4e20a1fe-9e87-4e60-908d-d5174e963fc1)
         
 2. 단점
     - 가장 많이 사용하는 페이지를 교체시킬 가능성 있음
     - Belady의 이상현상(anomaly): 프로세스에 더 많은 수의 페이지 프레임을 할당할 경우 오히려 페이지 부재가 더 많이 발생할 수 있는 경우
-     <br/>
-    *Belady의 이상현상*
-        
-        ![Belady의 이상현상.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/440e0051-e1a6-4fc1-b7a8-96dc6ee9928e/b36a8227-fdbe-4d01-b70e-7cfc272daef2/Belady%EC%9D%98_%EC%9D%B4%EC%83%81%ED%98%84%EC%83%81.png)
+
+        ![image](https://github.com/myrhymetree/operating-system/assets/94158097/82313c7c-5d39-4381-af96-3e9cf3ab1120)
         
 
 ## 7.4.2 LRU 페이지 교체
@@ -233,18 +231,16 @@
     - 페이지를 엑세스하면 해당 페이지 번호를 리스트의 선두에 옮김
     - 교체가 필요한 경우 리스트의 끝에 있는 페이지(참조시각이 가장 오래됨)가 교체 대상으로 선택
     
-    ![*참조시간을 이용한 LRU 페이지 교체기법 구현*](https://prod-files-secure.s3.us-west-2.amazonaws.com/440e0051-e1a6-4fc1-b7a8-96dc6ee9928e/29b9f2c4-aefa-40c7-bd33-c6c4d13226fa/Untitled.png)
-    
+    ![image](https://github.com/myrhymetree/operating-system/assets/94158097/d3649ce6-7001-4785-9b18-0a8ae4c21fd4)
     *참조시간을 이용한 LRU 페이지 교체기법 구현*
     
 4. 리스트를 이용한 LRU 구현
     - 메모리에 적재된 페이지 번호를 저장하는 리스트를 이용
     - 페이지를 엑세스하면 해당 페이지 번호를 리스트의 선두에 옮김
     - 교체가 필요한 경우 리스트의 끝에 있는 페이지가 교체 대상으로 선택
-     <br />
-    *리스트를 이용한 LRU 페이지 교체기법 구현*
         
-        ![LRU페이지교체.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/440e0051-e1a6-4fc1-b7a8-96dc6ee9928e/c6aaa7da-f483-4428-9c8f-27a4eecbaaee/LRU%ED%8E%98%EC%9D%B4%EC%A7%80%EA%B5%90%EC%B2%B4.png)
+        ![image](https://github.com/myrhymetree/operating-system/assets/94158097/af628262-bdda-474f-91c9-5bc95581dc34)
+        *리스트를 이용한 LRU 페이지 교체기법 구현*
         
 5. 장점
     - Belady의 이상현상이 발생하지 않음
@@ -256,7 +252,7 @@
 
 ## 7.4.3 LFU 페이지 교체
 
-![Untitled](https://prod-files-secure.s3.us-west-2.amazonaws.com/440e0051-e1a6-4fc1-b7a8-96dc6ee9928e/10663bad-0d97-4113-93fe-f5b16af7bbad/Untitled.png)
+![image](https://github.com/myrhymetree/operating-system/assets/94158097/99faf30f-2074-48ff-9725-54def676d519)
 
 1. LFU(Least Frequetly Used)페이지 교체 기법
     - 참조된 횟수가 가장 적은 페이지가 교체
@@ -290,8 +286,8 @@
         - 각 페이지가 메모리에 적재될 때는 참조 비트 0
         - 적재된 상태에서 추가로 참조되면 참조 비트 1
         - 페이지 교체가 필요한 경우에는 FIFO 큐의 선두 항목을 꺼내 참조비트를 조사하여 '0'이면 그 프레임을 교체 대상으로 선택, '1'이면 이를 '0'으로 지우고 FIFO 큐의 뒤에 넣음
-        
-        ![Untitled](https://prod-files-secure.s3.us-west-2.amazonaws.com/440e0051-e1a6-4fc1-b7a8-96dc6ee9928e/0bd0e929-56f2-4747-ad5d-083e0dd03207/Untitled.png)
+  
+        <img src="https://github.com/myrhymetree/operating-system/assets/94158097/3cb628da-060d-49c9-b860-589d4e4d432a" width="50%" height="50%"/>
         
     - 참조할 페이지가 메모리에 없는 경우
         - 빈 페이지 프레임이 있으면
@@ -303,25 +299,26 @@
     - 참조할 페이지가 메모리에 있는 경우
         - 큐 위치 변화 없이 참조 비트만 1로 설정
         - 큐를 이용한 구현
-        
-        ![Untitled](https://prod-files-secure.s3.us-west-2.amazonaws.com/440e0051-e1a6-4fc1-b7a8-96dc6ee9928e/e8d63557-ddaa-4a4c-ac54-90fcb6e43edc/Untitled.png)
-        
-        ![Untitled](https://prod-files-secure.s3.us-west-2.amazonaws.com/440e0051-e1a6-4fc1-b7a8-96dc6ee9928e/d6e63704-e0c6-4375-899f-f54ad1af3f25/Untitled.png)
+  
+        <img src="https://github.com/myrhymetree/operating-system/assets/94158097/7d5c8026-cd41-46da-83dc-5ddd46442575" width="80%" height="80%"/>
+  
+        <img src="https://github.com/myrhymetree/operating-system/assets/94158097/99fa15a1-e8ef-4b87-8602-ceaf8174ae9b" width="80%" height="80%"/>
         
 
 ## 7.4.6 클럭 페이지 교체
 
 1. 클럭 페이지 교체(변형된 원형 큐를 이용한 구현)
-    
-    ![Untitled](https://prod-files-secure.s3.us-west-2.amazonaws.com/440e0051-e1a6-4fc1-b7a8-96dc6ee9928e/b42ea595-93dc-4cb2-a3bd-4f01bf439f98/Untitled.png)
+   
+    <img src="https://github.com/myrhymetree/operating-system/assets/94158097/a087d725-6951-4d21-8cf5-1fe71f868cb5" width="50%" height="50%"/>
     
     - 2차 기회 알고리즘에서 선형 큐 대신 원형 큐를 사용
     - 포인터가 시계바늘이 돌아가는 것처럼 원형 큐를 돌며 교체 대상 결정
     - 포인터는 마지막에 추가된 페이지의 다음 위치를 가리킴
         - 빈 페이지 프레임이 있는 경우 : 빈칸
         - 페이지 프레임이 꽉 찬 경우 : 큐의 선두
-    
-    ![Untitled](https://prod-files-secure.s3.us-west-2.amazonaws.com/440e0051-e1a6-4fc1-b7a8-96dc6ee9928e/5898f8ef-bd96-4c41-a954-e57f9ca0bdb5/Untitled.png)
+
+    <img src="https://github.com/myrhymetree/operating-system/assets/94158097/c276c55b-e0bc-45f8-a1e0-fa092ad3363a" width="80%" height="80%"/>
+
     
 
 ## 7.4.7 프로세스별 페이지 집합 관리
@@ -339,9 +336,9 @@
     - 프로세스의 워킹세트 W(t,δ)
         - 시각 t에 t를 포함한 직전 δ시간 동안 참조한 페이지의 집합
         - 시간 t에서 한 프로세스의 워킹세트 W(t, w)는 t-w로부터 t까지의 프로세스 시간 간격 동안 참조된 페이지의 집합
-        
-        ![Untitled](https://prod-files-secure.s3.us-west-2.amazonaws.com/440e0051-e1a6-4fc1-b7a8-96dc6ee9928e/2bbf25ed-4605-4aa0-bc9f-b76fcd9c6644/Untitled.png)
-        
+  
+        <img src="https://github.com/myrhymetree/operating-system/assets/94158097/924a331b-9ebe-4b7e-a5fb-bfd3e3938ba8" width="50%" height="50%"/>
+
     - 워킹세트 알고리즘
         - 프로세스가 수행됢에 따라 그 프로세스의 워킹 세트는 변할 수 있으며 워킹 세트의 크기도 달라질 수 있음
         - 워킹 세트 알고리즘의 원칙
