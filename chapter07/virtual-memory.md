@@ -1,4 +1,4 @@
-# 7.가상메모리
+![image](https://github.com/myrhymetree/operating-system/assets/94158097/f79b7a8a-72f7-47a1-946a-6bcadc6dd361)# 7.가상메모리
 
 ## 7.1 가상 메모리의 개념
 
@@ -30,7 +30,6 @@
     - 가상주소 공간에서 연속인 주소가 실주소공간에서도 연속일 필요는 없음
 
         <img src="https://github.com/myrhymetree/operating-system/assets/94158097/47102a0c-cb21-40f2-b00f-053a558545c0" width="50%" height="50%"/>
-        <img src="" width="50%" height="50%"/>
         
 
 ## 7.2 블록 단위 주소 변환
@@ -71,38 +70,40 @@
     - 가상 메모리를 페이지 단위로 나누어 관리하는 기법
     - 메모리 영역도 페이지와 동일한 크기의 페이지 프레임으로 나눔
         - 페이지 프레임 : 페이지를 담을 수 있는 틀
-        
-        ![Untitled](https://prod-files-secure.s3.us-west-2.amazonaws.com/440e0051-e1a6-4fc1-b7a8-96dc6ee9928e/f0e5c868-1806-4142-82f1-6bef7af0cd0a/Untitled.png)
+  
+        <img src="https://github.com/myrhymetree/operating-system/assets/94158097/5978792a-3395-46c4-bfe0-333861e9da86" width="80%" height="80%"/>
+
         
 2. 페이지 프레임
     - 가상 메모리의 동일한 고정된 크기로 분할된 메모리 영역의 블록
     - 가상 메모리 상의 페이지를 담을 수 있도록 실제 메모리에 틀(frame)을 만들어 둔 것
 3. 페이지 사상표
-    
-    ![Untitled](https://prod-files-secure.s3.us-west-2.amazonaws.com/440e0051-e1a6-4fc1-b7a8-96dc6ee9928e/80004542-7f50-4a66-b30e-aa751d59d050/Untitled.png)
+
+    <img src="https://github.com/myrhymetree/operating-system/assets/94158097/fcd82cfb-4fd5-42fe-9f8a-532a0552d372" width="80%" height="80%"/>
     
     - 프로세스가 사용하는 가상주소를 메모리에 적재된 후에도 바로 찾을 수 있도록 실주소로 동적 변환을 할 수 있게 함.
     - 페이지 번호에 대한 페이지 프레임 번호 저장
-        
-        ![Untitled](https://prod-files-secure.s3.us-west-2.amazonaws.com/440e0051-e1a6-4fc1-b7a8-96dc6ee9928e/2f03aa96-22f2-4a64-b50a-2605af0247ab/Untitled.png)
+  
+        <img src="https://github.com/myrhymetree/operating-system/assets/94158097/e27d8970-e732-458b-8efd-b2c9a5223a1f" width="50%" height="50%"/>
+      
         
     - 가상주소의 페이지 번호별 저장 정보 : 실주소의 페이지 프레임 번호, 현재 메모리에 존재하는지의 여부 비트값, 보조기억장치의 주소
     
-4. 동적 주소 변환
+5. 동적 주소 변환
     - 직접 사상 : 페이지 사상표를 직접 이용하여 동적 주소 변환
     
-    ![Untitled](https://prod-files-secure.s3.us-west-2.amazonaws.com/440e0051-e1a6-4fc1-b7a8-96dc6ee9928e/50feca9d-378d-46e3-9782-7dc0f8ee111f/Untitled.png)
+    ![image](https://github.com/myrhymetree/operating-system/assets/94158097/22d11389-8ad2-4bee-a398-b9999e35d006)
     
     - 연관 사상 : 페이지 변환 정보를 연관 기억장치에 저장한 연관 사상표를 이용하여 동적 주소 변환
         
-        ![Untitled](https://prod-files-secure.s3.us-west-2.amazonaws.com/440e0051-e1a6-4fc1-b7a8-96dc6ee9928e/ee6bacac-5c9f-45f3-8010-b0e336c0b9f6/Untitled.png)
+        ![image](https://github.com/myrhymetree/operating-system/assets/94158097/0d8086b8-57b1-4502-b6a0-035e4a3d384c)
         
     - 연관 기억장치 : 저장된 값을 이용하여 데이터를 엑세스하는 고속 메모리 장치
     
-    ![Untitled](https://prod-files-secure.s3.us-west-2.amazonaws.com/440e0051-e1a6-4fc1-b7a8-96dc6ee9928e/e3f654e1-1fb5-4391-b4ad-97ee64caee28/Untitled.png)
+    ![image](https://github.com/myrhymetree/operating-system/assets/94158097/02a5f1bf-3617-4599-9807-0a07fa3e3ea2)
     
     - 연관 / 직접 사상 : 연관 사상표에는 가장 최근에 참조된 페이지 항목만 보관하고 나머지는 페이지 사상표에 수록하여, 연관 사상표에 없을 때는 직접 사상 기법으로 변환
-5. 페이징 기법의 특징
+6. 페이징 기법의 특징
     - 논리적 의미와 무관한 동일 크기의 페이지로 나눔
     - 메모리 보호는 페이지 단위로 이루어짐
     - 외부 단편화는 발생하지 않으나 내부 단편화는 발생할 수 있음
@@ -110,16 +111,16 @@
 ## 7.2.2 세그먼테이션 기법
 
 1. 세그먼테이션 기법
-    
-    ![Untitled](https://prod-files-secure.s3.us-west-2.amazonaws.com/440e0051-e1a6-4fc1-b7a8-96dc6ee9928e/0aff7f1f-f5b3-44a2-9c43-472a99585f42/Untitled.png)
-    
+   
+    <img src="https://github.com/myrhymetree/operating-system/assets/94158097/17948670-fe23-4b64-a1ce-999701b4124f" width="50%" height="50%"/>
+
     - 가상 메모리를 세그먼트 단위로 나누어 관리하는 기법
         - 세그먼트 : 논리적 의미에 부합하는 다양한 크기의 블록
     - 세그먼트 사상표를 이용하여 동적 주소변환
     - 메모리 적재를 위해서는 최초 적합(first-fit), 최적 적합(best-fit) 등의 방법 이용
 2. 세그먼트 사상표
-    
-    ![Untitled](https://prod-files-secure.s3.us-west-2.amazonaws.com/440e0051-e1a6-4fc1-b7a8-96dc6ee9928e/ebbdde87-ac6e-4d37-94ce-be1d309d0b48/Untitled.png)
+
+    <img src="https://github.com/myrhymetree/operating-system/assets/94158097/85f2d99d-30e4-4d90-ac3e-1a12f7d5c025" width="50%" height="50%"/>
     
     - 페이지 사상표와 유사
         - 세그먼트 번호에 대한 실주소에서의 시작 위치 저장
@@ -128,14 +129,14 @@
         - 세그먼트 존재 비트 : 해당 세그먼트가 현재 메모리에 존재하는지 여부를 나타내는 비트값
     - 동적 주소변환
         
-        ![Untitled](https://prod-files-secure.s3.us-west-2.amazonaws.com/440e0051-e1a6-4fc1-b7a8-96dc6ee9928e/3b6c94b5-53fc-49d5-b532-bed8a1fda0ac/Untitled.png)
+        ![image](https://github.com/myrhymetree/operating-system/assets/94158097/0cca70a5-e1fe-4f71-a7c5-42de4d5e6a5f)
         
 
 ## 7.2.3 페이징/세그먼테이션 혼용기법
 
-![Untitled](https://prod-files-secure.s3.us-west-2.amazonaws.com/440e0051-e1a6-4fc1-b7a8-96dc6ee9928e/6731db63-23d4-414f-b265-247835d86f7f/Untitled.png)
+![image](https://github.com/myrhymetree/operating-system/assets/94158097/aa75c31c-02e8-4d0b-9271-fab0b1655983)
 
-![페이징세그먼테이션.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/440e0051-e1a6-4fc1-b7a8-96dc6ee9928e/9de7c576-bb74-48ca-9c6f-14aa647dc465/%ED%8E%98%EC%9D%B4%EC%A7%95%EC%84%B8%EA%B7%B8%EB%A8%BC%ED%85%8C%EC%9D%B4%EC%85%98.png)
+![image](https://github.com/myrhymetree/operating-system/assets/94158097/a2af0a69-5a03-442f-93c4-23c5d7737850)
 
 1. 페이징/세그먼테이션 혼용기법
     - 세그먼테이션 기법의 논리적 장점과 페이징 기법의 메모리 관리 측면의 장점을 활용
@@ -144,7 +145,7 @@
     - 세그먼트 사상표에 저장되는 주소는 실주소가 아닌 각 세그먼트에 대한 페이지 사상표의 시작 주소(그림에서 180)
     - 동적 주소변환
         
-        ![동적주소변환.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/440e0051-e1a6-4fc1-b7a8-96dc6ee9928e/d9546829-1eea-4508-84b8-8bbed816d831/%EB%8F%99%EC%A0%81%EC%A3%BC%EC%86%8C%EB%B3%80%ED%99%98.png)
+![image](https://github.com/myrhymetree/operating-system/assets/94158097/0bb090f7-9b98-4bbb-a17e-28a1388b0ae6)
         
 
 # 7.3 페이지 호출기법
@@ -153,12 +154,13 @@
     - 어느 시점에 페이지 또는 세그먼트를 메모리에 적재할 것인가를 결정하는 기법
     - 페이징 기법에서 호출기법 종류
         - 요구 페이지 호출 기법
-            
-            ![Untitled](https://prod-files-secure.s3.us-west-2.amazonaws.com/440e0051-e1a6-4fc1-b7a8-96dc6ee9928e/545db28b-5974-4d02-af70-215427efd9ab/Untitled.png)
+  
+            <img src="https://github.com/myrhymetree/operating-system/assets/94158097/5493fd51-f9e3-4cf2-846f-1af3ca01a54b" width="50%" height="50%"/>
             
         - 예상 페이지 호출 기법
-            
-            ![Untitled](https://prod-files-secure.s3.us-west-2.amazonaws.com/440e0051-e1a6-4fc1-b7a8-96dc6ee9928e/b3d32049-a185-4131-bf6d-efbf6e225e08/Untitled.png)
+     
+            <img src="https://github.com/myrhymetree/operating-system/assets/94158097/ff2d117a-659d-40d0-8495-626338f8a8ba" width="50%" height="50%"/>
+
             
 2. 요구 페이지 호출기법(demand page fetch strategy)
     - 페이지가 요구될 때 해당 페이지를 메모리로 옮김
@@ -176,7 +178,7 @@
 1. 페이징 기법
     - 모든 페이지 프레임이 사용되고 있을 때 새로 적재되어야 할 페이지를 위해 적절한 교체 대상을 결정
         
-        ![Untitled](https://prod-files-secure.s3.us-west-2.amazonaws.com/440e0051-e1a6-4fc1-b7a8-96dc6ee9928e/b16325fe-7347-45b3-b57d-c128cc010e0a/Untitled.png)
+        ![image](https://github.com/myrhymetree/operating-system/assets/94158097/4ac6ea1f-c7cf-4d6a-9eab-35dc20e3d119)
         
 2. 최적화 원칙(principle of optimality)
     - 최적의 성과를 얻기 위해 앞으로 가장 오랫동안 사용되지 않을 페이지를 교체 대상으로 선택
